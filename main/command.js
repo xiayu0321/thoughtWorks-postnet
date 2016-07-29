@@ -15,7 +15,7 @@ function goToZipcodeToBarcode() {
         newmapping:{"*":translateZipcodeToBarcode}
     }
 }
- 
+
 function goToBarcodeToZipcode() {
     return {
         text:`Please input bar code:`,

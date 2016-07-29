@@ -1,5 +1,6 @@
 'use strict';
-let _ = require('../lib/lodash');
+
+let _ = require('lodash');
 let loadIt = require("../spec/fixtures");
 
 function checkZipcodeFormate(zipcode) {
@@ -80,7 +81,7 @@ function checkBarcodeFormate(barcode) {
         }
     }
 }
-
+  
 function getFormatedBarcode(testedBarcode) {
     let formatedBarcode = [];
 

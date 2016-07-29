@@ -5,7 +5,8 @@ let route = require('../main/route');
 describe('postnet', function () {
     beforeEach(() => {
         route.reset();
-    })
+    });
+    
     it('start', function () {
         var response = route("main");
         expect(response).toEqual( `1. Translate zip code to bar code

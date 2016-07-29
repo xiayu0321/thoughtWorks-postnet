@@ -37,7 +37,7 @@ describe('#4', () => {
     let matchedBarcode = bulidModel.matchByTableBarcode(formatedZipcode,loadIt());
 
     const result = [':|::|:|:|:||::::|:|::||::||:::'];
-    it("get matched barcode", function() {
+    it("get match  ed barcode", function() {
         expect(matchedBarcode).toEqual(result);
     });
 });
@@ -64,6 +64,8 @@ describe('#6', () => {
     })
 })
 
+
+  
 describe('#7', () => {
     let barcode = '|:|::|:|:|:||::::|:|::||:::::||::|:|::||::|::|||:::|';
     
