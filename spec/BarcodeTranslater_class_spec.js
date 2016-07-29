@@ -13,11 +13,11 @@ describe('bulid zipcode to barcode', () => {
     });
 
 
-    it('get barcode model', function () {
-        let barcode = '|:|::|:|:|:||::::|:|:||:::|';
+    fit('get barcode model', function () {
+        let barcode = '|:::||::|:|::||::|::|:|:|::|:|:|';
 
-        let excepted = false;
-        expect(barcodeTranslate.execute(barcode)).toEqual(excepted);
+        let excepted = '12345';
+        expect(barcodeTranslate.execute(barcode)._message).toEqual(excepted);
     });
 });
 

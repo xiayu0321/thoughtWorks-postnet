@@ -21,6 +21,8 @@ class BarcodeTranslater_class{
         } else {
             return false;
         }
+    }else{
+        return false;
     }
 }
 
@@ -30,15 +32,15 @@ class BarcodeTranslater_class{
     if(testedBarcode === false){
         return false;
     }else {
-        if(testedBarcode.length < 5){
+        if(testedBarcode.length < 7){
             return false;
         }else {
             for (let i = 1; i < testedBarcode.length - 1; i += 5) {
                 formatedBarcode.push(testedBarcode.substring(i, i + 5));
             }
         }
-        return formatedBarcode;
     }
+        return formatedBarcode;
 }
 
     getElementByBarcode(array, barcode) {
@@ -113,18 +115,26 @@ class BarcodeTranslater_class{
         let zipcodeModel = [];
         let zipcodeModels = '';
 
-        for (let i = 0; i < 5; i++) {
-            zipcodeModel.push(finalZipcode[i]);
-        }
-        zipcodeModel.push('-');
-        for (let i = 5; i < finalZipcode.length; i++) {
-            zipcodeModel.push(finalZipcode[i]);
-        }
+        if(finalZipcode.length === 5){
+            for (let i = 0; i < 5; i++) {
+                zipcodeModel.push(finalZipcode[i]);
+            }
+            for (let i = 0; i < zipcodeModel.length; i++) {
+                zipcodeModels += zipcodeModel[i];
+            }
+        }else {
+            for (let i = 0; i < 5; i++) {
+                zipcodeModel.push(finalZipcode[i]);
+            }
+            zipcodeModel.push('-');
+            for (let i = 5; i < finalZipcode.length; i++) {
+                zipcodeModel.push(finalZipcode[i]);
+            }
 
-        for (let i = 0; i < zipcodeModel.length; i++) {
-            zipcodeModels += zipcodeModel[i];
+            for (let i = 0; i < zipcodeModel.length; i++) {
+                zipcodeModels += zipcodeModel[i];
+            }
         }
-
         return zipcodeModels;
     }
 }
