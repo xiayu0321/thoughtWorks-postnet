@@ -10,9 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "readline-sync": "^1.4.4",
+    "request": "^2.74.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiayu0321/thoughtWorks-postnet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiayu0321/thoughtWorks-postnet/issues"
+  },
+  "homepage": "https://github.com/xiayu0321/thoughtWorks-postnet#readme",
   "description": ""
 }
